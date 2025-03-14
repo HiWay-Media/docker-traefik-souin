@@ -4,7 +4,7 @@ FROM alpine:3
 RUN apk update && \
     apk add git && \
     git clone https://github.com/darkweak/souin.git /plugins-local/src/github.com/darkweak/souin \
-      --depth 1 --single-branch --branch v1.6.37
+      --depth 1 --single-branch --branch v1.6.50
 
 FROM traefik:v2.7.3
 COPY --from=0 /plugins-local /plugins-local
